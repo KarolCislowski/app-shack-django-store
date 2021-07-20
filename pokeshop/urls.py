@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path
-from django.urls import path
 from django.urls.conf import include
 
 from django.conf import settings
@@ -11,4 +10,5 @@ urlpatterns = [
     path('api/', include('djoser.urls')),
     path('api/', include('djoser.urls.authtoken')),
     path('api/', include('products.urls')),
+    path('api/', include('orders.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
